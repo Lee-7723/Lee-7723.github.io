@@ -1,0 +1,820 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0059)http://jwgl.bupt.edu.cn/jsxsd/framework/xsMain_new.jsp?t1=1 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+body, html{
+				width: 100%;
+				height: 100%;
+}
+</style>	
+<link type="text/css" rel="stylesheet" href="./laydate.css"><link type="text/css" rel="stylesheet" href="./laydate(1).css" id="LayDateSkin"><link href="./WdatePicker.css" rel="stylesheet" type="text/css"></head><body><div class="middlewap">
+	<div class="middlewapleftpart">
+		<div class="middlewapleftup">
+			<div class="middletopt l">
+				<div class="middletopttx">
+			
+				<div class="circle zp defzp" style="background-image:url(&#39;student/images/zp.jpg&#39;)">
+					
+				</div>
+			
+			
+			</div>
+			
+			<div class="middletopttxl">
+						<!--<img src="/jsxsd/grxx/xszpLoad"
+							width="100" height="100" border="0" style="height:inherit;width:40px;"
+							onerror="javasript:this.src='student/images/tx1.png';" />-->
+					<div class="middletopttxlr">
+						<div><div class="f14 blue middletopdwxxtit">&nbsp;</div><div class="middletopdwxxcont">&nbsp;</div></div>
+						<div><div class="f14 blue middletopdwxxtit">学生姓名：</div><div class="middletopdwxxcont">李竞择</div></div>
+						<div><div class="f14 blue middletopdwxxtit">学生编号：</div><div class="middletopdwxxcont">2019211056</div></div>
+						<div><div class="f14 blue middletopdwxxtit">所属院系：</div><div class="middletopdwxxcont">电子工程学院</div></div>
+						<div><div class="f14 blue middletopdwxxtit">专业名称：</div><div class="middletopdwxxcont">电子信息类</div></div>
+						<div><div class="f14 blue middletopdwxxtit">班级名称：</div><div class="middletopdwxxcont">2019211209</div></div>
+					</div>
+				</div>
+		</div>
+
+		
+		<script type="text/javascript" src="./jquery-min.js.下载" language="javascript"></script>
+		<script type="text/javascript" src="./common.js.下载" language="javascript"></script>
+		<script type="text/javascript" src="./iepngfix_tilebg.js.下载" language="javascript"></script>
+		
+		<link rel="stylesheet" type="text/css" href="./WdatePicker.css">
+		<link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="./css.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<link rel="stylesheet" type="text/css" href="./WdatePicker.css">
+		<link href="./common.css" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript" src="./ui.js.下载"></script>
+		<script type="text/javascript" src="./laydate.js.下载"></script>
+		<script type="text/javascript" src="./index.js.下载"></script>
+		<script type="text/javascript" src="./WdatePicker.js.下载"></script>
+		<div class="middletop">
+			<div class="noticetitle b">
+							我的课表
+			</div>
+			<div class="middletopleft">
+				<div class="middletopleftkb">
+					<div class="middletopleftl" style="height: 100%;">
+						
+						<div class="middletopleftrqbox" style="height: 12%;">
+							<div class=" pr5 middletopleftzc" id="li_showWeek"><span class="main_text main_color">第19周</span>/20周</div>
+							<div class="middletopleftdqrq">
+								<input type="text" id="rq" value="2020-01-02" readonly="" class="form-control" placeholder="2020-01-02">
+								<span class="input-group-addon" id="sizing-addon1" onclick="selectWdatePicker()">
+									<i class="glyphicon glyphicon-calendar"></i>
+								</span>
+							</div>
+							<div class="middletopleftdqrq" style="margin-left: 30px;color: black;">
+								时间模式：<select name="sjms" id="sjms" style="width:120px" onchange="selectWdatePicker2()">
+								
+									<option value="9475847A3F3033D1E05377B5030AA94D">默认节次模式</option>
+								
+							</select>
+							</div>
+						</div>
+						
+						<div id="kbLoading" style="height: 88%;overflow: auto;">
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="table table-bordered table-hover table-striped kb_table" style="overflow: scroll;height: 95%;">
+	<thead>
+		<tr>
+			<th style="width: 14%;">周/节次</th>
+			<th style="width: 12%;">星期一</th>
+			<th style="width: 12%;">星期二</th>
+			<th style="width: 12%;">星期三</th>
+			<th style="width: 12%;">星期四</th>
+			<th style="width: 12%;">星期五</th>
+			<th style="width: 12%;">星期六</th>
+			<th style="width: 12%;">星期日</th>
+		</tr>
+	</thead>
+	<tbody>
+	  
+		<tr>
+		    <td>1
+					<br>(01,02小节)
+					<br>8:00-9:35
+			</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+		</tr>
+	  
+		<tr>
+		    <td>2
+					<br>(03,04小节)
+					<br>9:50-11:25
+			</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+		</tr>
+	  
+		<tr>
+		    <td>3
+					<br>(05,06小节)
+					<br>11:30-13:45
+			</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+		</tr>
+	  
+		<tr>
+		    <td>4
+					<br>(07,08小节)
+					<br>13:50-15:30
+			</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+		</tr>
+	  
+		<tr>
+		    <td>5
+					<br>(09,10小节)
+					<br>15:40-17:20
+			</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+				<td>
+					
+					
+				</td>
+		    
+		</tr>
+	  
+	</tbody>
+</table>
+
+<style>
+#tooltip{position:absolute;z-index:9999;display:none;padding:4px 8px;border:1px solid rgba(255,255,255,0.25);border-radius:3px;background-color:#333333;filter:alpha(Opacity=80); opacity: 0.8;color:#fff;text-align:left;font-size:16px;}
+#tooltip:before{position:absolute;top:-6px;left:15px;width:0;height:0;border:6px dashed #333333;border-top:0;color:#fff;content:' ';line-height:0;border-bottom-style:solid;border-left-color:transparent;border-right-color:transparent;}
+</style>
+<script type="text/javascript">
+
+
+$("#li_showWeek").html("<span class=\"main_text main_color\">第19周</span>/20周");
+
+
+
+$(function(){
+	    var x=-15;//title显示层x轴偏移量
+	    var y=30;//title显示层y轴偏移量
+	    $("p").mouseover(function(e){//
+	    	// 对所有td元素增加鼠标移入移出事件 //edit by wangwei 2018.10.31 此处修改为对所有P标签增加移入移出事件
+	      this.myTitle=this.title;
+	      this.title="";
+	      if(this.myTitle != ""){
+		      var tooltip="<div id='tooltip'>"+this.myTitle+"</div>"; //创建DIV元素
+		      $("body").append(tooltip); //追加到文档中
+		      $("#tooltip").css({"top": (e.pageY+y) + "px","left": (e.pageX+x) + "px"}).show();     //设置X Y坐标， 并且显示
+	      }   
+	    }).mouseout(function(){
+	      this.title=this.myTitle;
+	      $("#tooltip").remove(); //移除
+	    }).mousemove(function(e){
+	        $("#tooltip").css({"top": (e.pageY+y) + "px","left": (e.pageX+x) + "px"});
+	    })
+})
+
+</script></div>
+						<script type="text/javascript">
+							var sjms = document.getElementById("sjms");
+							var sjmsValue = "";
+							if(sjms){
+								sjmsValue = sjms.value;
+							}							
+							//TD:67812 缴费课表控制
+							var isjfkz = '0';
+							if(isjfkz=="1"){
+								$("#kbLoading").load("/jsxsd/view/xssf/xsjf_message.jsp", {rq: "2020-01-02"});
+							}else{								
+								$("#kbLoading").load("/jsxsd/framework/main_index_loadkb.jsp", {rq: "2020-01-02",sjmsValue:sjmsValue});
+							}						
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="middlewapleftdown">
+			<div class="middlewapmyexam l">
+				<div class="noticetitle b" style="height: 10%;">
+					在线问答
+				</div>
+				<div class="examlist" style="height: 40%;">
+					<ul class="list-group list_tz" style="margin-bottom:0;">
+						  
+					</ul>
+				</div>
+				<div class="noticetitle b" style="height: 10%;">
+					学业信息
+				</div>
+				
+					<div class="examlist" id="ul_xyxxggList" style="height: 40%;">
+
+
+
+
+
+
+<ul class="list-group list_tz" style="margin-bottom:0;">
+	
+	  
+	
+		<li class="list-group-item " style="border: 0px;" title="毕业审查结果已出">
+			<ul>
+				<li class="no_padding col-sm-9" style="width: 70%;padding: 0;">
+					<div class="no_padding " style="width: 100%;float: left;">
+						<a href="javascript:void(0);" onclick="gotoXyxxgg2(&#39;2019211056&#39;)" title="执行计划内未及格、未修读、修读中课程">
+							执行计划内未及格、未修读、修读中课程
+						</a>
+					</div>
+				</li>
+			</ul>
+		</li>
+	
+</ul>
+
+<script type="text/javascript">
+//置顶功能开始
+
+function tzMouseout(ind){
+	$("#fbsj"+ind).show();
+	$("#img"+ind).hide();
+}
+function tzMouseover(ind){
+	$("#fbsj"+ind).hide();
+	$("#img"+ind).show();
+}
+function zdOper(obj,ggid){
+	var parentsLi = $(obj).parent().parent().parent();//获得最顶层li控件
+	var next = parentsLi.prev();//获得li的上一个兄弟节点
+	
+	while(next.prev().html() != undefined){
+		next = next.prev();//获得li的上一个兄弟节点
+	}
+	next.fadeOut("slow",function(){//交换位置
+		$(this).before(parentsLi);
+		}).fadeIn();
+	dwrMonitor.gglyZd(ggid);//更新置顶字段	
+}
+//置顶功能结束
+</script></div>
+				
+			</div>
+			<div class="middlewapmynotice">
+				<div class="noticetitle b" style="height: 10%;">
+					通知
+				</div>
+				<div class="noticelist" id="ul_tzggList">
+
+
+
+
+
+
+<ul class="list-group list_tz" style="margin-bottom:0;">
+	<br>
+	  
+</ul>
+
+<script type="text/javascript">
+//置顶功能开始
+
+function tzMouseout(ind){
+	$("#fbsj"+ind).show();
+	$("#img"+ind).hide();
+}
+function tzMouseover(ind){
+	$("#fbsj"+ind).hide();
+	$("#img"+ind).show();
+}
+function zdOper(obj,ggid){
+	var parentsLi = $(obj).parent().parent().parent();//获得最顶层li控件
+	var next = parentsLi.prev();//获得li的上一个兄弟节点
+	
+	while(next.prev().html() != undefined){
+		next = next.prev();//获得li的上一个兄弟节点
+	}
+	next.fadeOut("slow",function(){//交换位置
+		$(this).before(parentsLi);
+		}).fadeIn();
+	dwrMonitor.gglyZd(ggid);//更新置顶字段	
+}
+//置顶功能结束
+</script></div>
+			</div>
+		</div>
+	</div>
+	<div class="middlewaprightpart r">
+		<div class="middlewaprightup" style="height: 52%;">
+			<div class="noticetitle b">
+				常用操作
+			</div>
+			<div class="usuafunmenu">
+				<div class="panel-body">
+					<div class="cy_icon">
+						
+							<div class="grid" onclick="kjcdShow(&#39;NEW_XSD_PYGL&#39;,&#39;NEW_XSD_PYGL_WDKB&#39;,&#39;NEW_XSD_PYGL_WDKB_XQLLKB&#39;,&#39;/xskb/xskb_list.do&#39;,&#39;学期理论课表&#39;)">
+								<div class="grid__icon">
+									<img src="./tb12.png">
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+									学期理论课表
+								</p>
+							</div>
+					   
+							<div class="grid" onclick="kjcdShow(&#39;NEW_XSD_XJCJ&#39;,&#39;NEW_XSD_XJCJ_WDCJ&#39;,&#39;NEW_XSD_XJCJ_WDCJ_KCCJCX&#39;,&#39;/kscj/cjcx_frm&#39;,&#39;课程成绩查询&#39;)">
+								<div class="grid__icon">
+									<img src="./tb11.png">
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+									课程成绩查询
+								</p>
+							</div>
+					   
+							<div class="grid" onclick="kjcdShow(&#39;NEW_XSD_PYGL&#39;,&#39;NEW_XSD_PYGL_XKGL&#39;,&#39;NEW_XSD_PYGL_XKGL_NXSXKZX&#39;,&#39;/xsxk/xklc_list&#39;,&#39;学生选课中心&#39;)">
+								<div class="grid__icon">
+									<img src="./tb9.png">
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+									学生选课中心
+								</p>
+							</div>
+					   
+							<div class="grid" onclick="kjcdShow(&#39;NEW_XSD_KSBM&#39;,&#39;NEW_XSD_KSBM_WDKS&#39;,&#39;NEW_XSD_KSBM_WDKS_KSAPCX&#39;,&#39;/xsks/xsksap_query&#39;,&#39;考试安排查询&#39;)">
+								<div class="grid__icon">
+									<img src="./tb12.png">
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+									考试安排查询
+								</p>
+							</div>
+					   
+							<div class="grid" onclick="kjcdShow(&#39;NEW_XSD_JXPJ&#39;,&#39;NEW_XSD_JXPJ_JXPJ&#39;,&#39;NEW_XSD_JXPJ_JXPJ_XSPJ&#39;,&#39;/xspj/xspj_find.do&#39;,&#39;学生评价&#39;)">
+								<div class="grid__icon">
+									<img src="./tb11.png">
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+									学生评价
+								</p>
+							</div>
+					   
+							<div class="grid" onclick="kjcdShow(&#39;NEW_XSD_KSBM&#39;,&#39;NEW_XSD_KSBM_WDSQ&#39;,&#39;NEW_XSD_KSBM_WDSQ_HKSQ&#39;,&#39;/kscj/hksq_query&#39;,&#39;缓考申请&#39;)">
+								<div class="grid__icon">
+									<img src="./tb14.png">
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+									缓考申请
+								</p>
+							</div>
+					   
+							<div class="grid" onclick="kjcdShow(&#39;NEW_XSD_KSBM&#39;,&#39;NEW_XSD_KSBM_CJGL&#39;,&#39;NEW_XSD_KSBM_CJGL_SHKSBM&#39;,&#39;/xsdjks/xsdjks_list&#39;,&#39;社会考试报名&#39;)">
+								<div class="grid__icon">
+									<img src="./tb12.png">
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+									社会考试报名
+								</p>
+							</div>
+					   
+							<div class="grid" onclick="kjcdShow(&#39;NEW_XSD_PYGL&#39;,&#39;NEW_XSD_PYGL_PYFA&#39;,&#39;NEW_XSD_PYGL_PYFAMX&#39;,&#39;/pyfa/topyfamx&#39;,&#39;培养方案明细&#39;)">
+								<div class="grid__icon">
+									<img src="./tb11.png">
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+									培养方案明细
+								</p>
+							</div>
+					   
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="middlewaprightdown" style="height: 47.2%;">
+			<div class="noticetitle b" style="height: 10%;">
+				学期进度安排
+			</div>
+			<div class="noticelist">
+				<ul class="cbp_tmtimeline">
+					
+						<li>
+							
+							
+								<div class="cbp_tmicon cbp_tmicon-phone">一月</div>
+							
+							<div class="cbp_tmlabel">
+					            <h6></h6>
+					        </div>
+						</li>
+					
+						<li>
+							
+								<div class="cbp_tmicon cbp_tmicon-phone" style="background-color:#1C84C6; ">十二月</div>
+							
+							
+							<div class="cbp_tmlabel">
+					            <h6></h6>
+					        </div>
+						</li>
+					
+						<li>
+							
+							
+								<div class="cbp_tmicon cbp_tmicon-phone">十一月</div>
+							
+							<div class="cbp_tmlabel">
+					            <h6></h6>
+					        </div>
+						</li>
+					
+						<li>
+							
+								<div class="cbp_tmicon cbp_tmicon-phone" style="background-color:#1C84C6; ">十月</div>
+							
+							
+							<div class="cbp_tmlabel">
+					            <h6></h6>
+					        </div>
+						</li>
+					
+						<li>
+							
+							
+								<div class="cbp_tmicon cbp_tmicon-phone">九月</div>
+							
+							<div class="cbp_tmlabel">
+					            <h6></h6>
+					        </div>
+						</li>
+					
+						<li>
+							
+								<div class="cbp_tmicon cbp_tmicon-phone" style="background-color:#1C84C6; ">八月</div>
+							
+							
+							<div class="cbp_tmlabel">
+					            <h6></h6>
+					        </div>
+						</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- 侧边条 -->
+	
+	
+<script type="text/javascript" src="./jquery.messager.js.下载" language="javascript"></script>
+<script type="text/javascript">
+function loadingTzgg() {
+	$("#ul_tzggList").load("/jsxsd/framework/main_index_loadtzgg.jsp");
+}
+function loadingXyxxgg() {
+	$("#ul_xyxxggList").load("/jsxsd/framework/main_index_loadxyxxgg.jsp");
+}
+$(function(){
+	loadingTzgg();
+	loadingXyxxgg();
+});
+
+var msg = "";
+function selectWdatePicker() {
+	var sjms = document.getElementById("sjms");
+	var sjmsValue = "";
+	if(sjms){
+		sjmsValue = sjms.value;
+	}
+	WdatePicker({
+		el:$dp.$("rq"),
+		isShowClear:false,
+		readOnly:true,
+		onpicking: function(dq){
+			$("#kbLoading").html("疯狂加载中...");
+			if(isjfkz=="1"){
+				$("#kbLoading").load("/jsxsd/view/xssf/xsjf_message.jsp", {rq: "2020-01-02"});
+			}else{
+				$("#kbLoading").load("/jsxsd/framework/main_index_loadkb.jsp", {rq: dq.cal.getNewDateStr()});			}
+		}
+	});
+}
+
+function kjcdShow(yjcode, ejcode, sjcode, url, name){
+	parent.showMenuErji(parent.$(".cy_icon > li[data-code='"+yjcode+"']").get(0));
+	parent.$(".sidebar-menu > li[data-code='"+ejcode+"']").addClass("active");
+	parent.$(".sidebar-menu > li[data-code='"+ejcode+"']").find(".treeview-menu").show();
+	parent.$(".sidebar-menu > li[data-code='"+ejcode+"']").find(".treeview-menu > li[data-sjcode='"+sjcode+"']").addClass("active");
+	parent.$(".tabs li.tabs-selected").find(".tabs-title").text(name);
+	parent.$("#Frame"+(parent.frameIndex-1)).attr("src", "/jsxsd"+url);
+}
+
+</script>
+<script language="javascript">
+function gotoZxwd(oaid) {
+	top.artDialog({
+		id: oaid,
+		title: "在线问答",
+		fixed: true,
+		url: "/jsxsd/zxwd/zxwd_show?openType=art&oaid="+oaid,
+		lock: true,
+		width: $(window).width() - 200,
+		height: $(window).height() - 100
+	});
+}
+
+var old_td = "";
+function gotoTzgg(ggid) {
+	top.artDialog({
+		id: ggid,
+		title: "通知公告",
+		fixed: true,
+		url: "/jsxsd/framework/main_index_tzgg.jsp?id="+ggid,
+		lock: true,
+		width: $(window).width() - 200,
+		height: $(window).height() - 300
+	}, null, null, function(){
+		loadingTzgg();
+	});
+}
+
+function gotoXyxxgg(ggid) {
+	top.artDialog({
+		id: ggid,
+		title: "学业信息",
+		fixed: true,
+		url: "/jsxsd/framework/main_index_xyxxgg.jsp?id="+ggid,
+		lock: true,
+		width: $(window).width() - 200,
+		height: $(window).height() - 300
+	}, null, null, function(){
+		loadingXyxxgg();
+	});
+}
+
+function gotoXyxxgg2(ggid) {
+	top.artDialog({
+		id: ggid,
+		title: "修读信息",
+		fixed: true,
+		url: "/jsxsd/framework/main_index_xyxxgg2.jsp?id="+ggid,
+		lock: true,
+		width: $(window).width() - 200,
+		height: $(window).height() - 100
+	}, null, null, function(){
+		loadingXyxxgg();
+	});
+}
+
+function showDetails(td_id,jx0408id){
+	var oldtd = document.getElementById(old_td);
+	if(oldtd!=null){
+		oldtd.className="";
+	}
+	old_td = td_id;
+	var td = document.getElementById(td_id);
+	td.className = "act";
+	
+	$.ajax({
+		type: "GET",
+		 async:true,
+		url: "/jsxsd/portal/queryDetails.do",
+		data: {id:jx0408id,sjjc:td_id,zc:'19'},
+		dataType: "json",
+		success:function(data){
+			var json = data.dataList[0];
+			var kcmc = json.kcmc;
+			if(kcmc.length>15){
+				kcmc = kcmc.substr(0, 13)+"......";
+			}
+			document.getElementById("kcmc").innerText = kcmc;
+			document.getElementById("xf").innerText = json.xf;
+			document.getElementById("skjs").innerText = json.skjs;
+			document.getElementById("skjs").innerText = "老师："+(json.skjs==null?"":json.skjs);
+			document.getElementById("jsmc").innerText = "教室："+json.jsmc;
+			document.getElementById("kkzc").innerText = "周次："+json.kkzc;
+			document.getElementById("bz").innerText = "备注："+(json.bz==null?"":json.bz);
+			document.getElementById("kcjd").innerText = data.jctxt;
+			document.getElementById("kcjdt").style.width = data.bl + "%";
+		}
+	});
+}
+
+//置顶功能开始
+
+function tzMouseout(ind){
+	$("#fbsj"+ind).show();
+	$("#img"+ind).hide();
+}
+function tzMouseover(ind){
+	$("#fbsj"+ind).hide();
+	$("#img"+ind).show();
+}
+function zdOper(obj,ggid){
+	var parentsLi = $(obj).parent().parent().parent();//获得最顶层li控件
+	var next = parentsLi.prev();//获得li的上一个兄弟节点
+	
+	while(next.prev().html() != undefined){
+		next = next.prev();//获得li的上一个兄弟节点
+	}
+	next.fadeOut("slow",function(){//交换位置
+		$(this).before(parentsLi);
+		}).fadeIn();
+	dwrMonitor.gglyZd(ggid);//更新置顶字段	
+}
+//置顶功能结束
+
+//是否通过快速链接进入 1为是
+var jumpFlag = "";
+if("1" == jumpFlag){
+	kjcdShow("", "", "" , "" ,"" );
+}
+function selectWdatePicker2() {
+	var sjms = document.getElementById("sjms");
+	var sjmsValue = "";
+	if(sjms){
+		sjmsValue = sjms.value;
+	}
+	var rq = document.getElementById("rq").value;
+	$("#kbLoading").html("疯狂加载中...");
+	$("#kbLoading").load("/jsxsd/framework/main_index_loadkb.jsp", {rq: rq,sjmsValue:sjmsValue});
+}
+</script>
+</body></html>
