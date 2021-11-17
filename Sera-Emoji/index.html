@@ -10,10 +10,25 @@
 
 	
 	<style type="text/css">
+	:root {
+		--color1: #AD9898;
+		--color2: #CFC6C6;
+		--border_color: #745C5C;
+	}
 	.emoji-pic {
-		-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));
+		//-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));
 		box-shadow: 2px 2px 6px rgb(0 0 0 / 50%);
-		margin: 3px
+		margin: 3px;
+		position: relative;
+		border: 2px solid var(--border_color);
+		border-radius: 12px;
+	}
+	.emoji-pic:hover {
+		//-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));
+		margin: 3px;
+		position: relative;
+		border: 4px solid #FFFFFF;
+		border-radius: 16px;
 	}
 	.emoji-pic-box {
 		width: 112px; 
@@ -31,12 +46,20 @@
 		font-family: 'Josefin Sans', sans-serif;
 		font-size: 300%
 	}
+	#twitch {
+		float: left; 
+		margin: 0px 20px 20px; 
+		padding: 10px 10px 20px; 
+		box-shadow:4px 4px 10px rgba(0 0 0 / 30%); 
+		border:10px double var(--border_color); 
+		background: linear-gradient(45deg,var(--color1),var(--color2))
+	}
 	</style>
 	
 	<script>
-	var color1='#AD9898';
-	var color2='#CFC6C6';
-	var border_color='#745C5C';
+	var color1 = '#AD9898';
+	var color2 = '#CFC6C6';
+	var border_color = '#745C5C';
 	</script>
 	
 </head>
@@ -52,9 +75,9 @@
 
 <div id='twitch'>
 	<center>
-	<a href='javascript:show()'  id='twitch_function' style="color: #000000; text-decoration: none"><h4 style="font-family: 'Josefin Sans'; font-size: 120%;">Twitch</h4></a>
+	<a href='javascript:hide()'  id='twitch_function' style="color: #000000; text-decoration: none"><h4 style="font-family: 'Josefin Sans'; font-size: 120%;">Twitch</h4></a>
 	<HR style="border:1; -webkit-filter: blur(2px) opacity(50%)" width="80%" color='#745C5C' SIZE=1>
-	<div class='emoji-pic-box' style="display:none !important;"> <img class='emoji-pic' src='sewaRaving.gif'> </div>
+	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaRaving.gif'> </div>
 	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaJam.gif'> </div>
 	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaHugs.gif'> </div>
 	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaWave.gif'> </div>
@@ -81,26 +104,20 @@
 </body>
 
 <script>
-	timer();
+	background_change();
 	
 	var getSecond
 	
 	function sleep (time) {
 	return new Promise((resolve) => setTimeout(resolve, time));
 	}
-	
-	var twitch_box = document.getElementById('twitch');
-	twitch_box.style.cssText=`float: left; margin: 0px 20px 20px; padding: 10px 10px 20px; box-shadow:4px 4px 10px rgba(0 0 0 / 30%); border:3px solid ${border_color}; background: linear-gradient(45deg,${color1},${color2})`;
-	
-	var discord_box = document.getElementById('discord');
-	//discord_box.style.cssText=`float: left; margin: 0px 20px 20px; padding: 10px 10px 20px; box-shadow:4px 4px 10px rgba(0 0 0 / 30%); border:3px solid ${border_color}; background: linear-gradient(45deg,${color1},${color2})`;
 
-	async function timer() {
+	async function background_change() {
 		for( var i = 0; i <= 360 ; i += 1 ) {
 		await sleep(10);
 		if(i==360){i=0}
 		
-		document.body.style.background=`linear-gradient(${i}deg,${color1},${color2})`;	//body color change
+		document.body.style.background=`linear-gradient(${i}deg,var(--color1),var(--color2))`;	//body color change
 
 		}
 	}	
@@ -111,7 +128,7 @@
 		pic[j].onmouseover = async function () {
 			for (var i = 0; i <= 38 ; i += 1 ) {
 				await sleep(2);
-				this.style.cssText=`width: ${112+Math.sqrt(37)*Math.sqrt(i)}px;  height: ${112+Math.sqrt(37)*Math.sqrt(i)}px; box-shadow: ${2+6/38*i}px ${2+6/38*i}px ${6+4/38*i}px rgb(0 0 0 / 50%); margin: 3px; z-index: 999; position:relative`;
+				this.style.cssText=`width: ${112+Math.sqrt(37)*Math.sqrt(i)}px;  height: ${112+Math.sqrt(37)*Math.sqrt(i)}px; box-shadow: ${2+6/38*i}px ${2+6/38*i}px ${6+4/38*i}px rgb(0 0 0 / 50%); z-index: 999; `;
 			}
 		}
 		
@@ -119,10 +136,10 @@
 			for (var i = 0; i <= 38 ; i += 1 ) {
 				await sleep(2);
 				
-				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-6/38*i}px rgb(0 0 0 / 50%); margin: 3px; z-index: 999; position:relative`;
+				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-4/38*i}px rgb(0 0 0 / 50%); z-index: 999; `;
 				
 				if (i==38) {
-				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-6/38*i}px rgb(0 0 0 / 50%); margin: 3px; z-index: 0; position:relative`;
+				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-4/38*i}px rgb(0 0 0 / 50%); z-index: 0; `;
 				}
 			}
 		}
@@ -136,6 +153,15 @@
 		func.href = "javascript:hide()";
 		console.log(func)
 
+var download_ = document.createElement('iframe');
+download_.id = 'download_frame';
+download_.src = 'sewaPat.png';
+download_.style.display = 'none';
+var body = document.getElementsByTagName('body')[0];
+body.appendChild(download_)
+
+var dl_box = document.getElementById('download_frame');
+dl_box.location.href = 'http://lee7723-laptop.dynv6.net:8000/Emoji_Showcase/Sera-Emoji/Sera-Emoji.zip';
 	}
 	
 	function hide () {
