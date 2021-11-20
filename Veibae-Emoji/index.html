@@ -11,10 +11,25 @@
 	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
 	
 	<style type="text/css">
+	:root {
+		--color1: #D8E4EF;
+		--color2: #FFE5EB;
+		--border_color: #837D9C;
+	}
 	.emoji-pic {
-		-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));
+		//-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));
 		box-shadow: 2px 2px 6px rgb(0 0 0 / 50%);
-		margin: 3px
+		margin: 3px;
+		position: relative;
+		border: 2px solid var(--border_color);
+		border-radius: 12px;
+	}
+	.emoji-pic:hover {
+		//-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));
+		margin: 3px;
+		position: relative;
+		border: 4px solid #FFFFFF;
+		border-radius: 16px;
 	}
 	.emoji-pic-box {
 		width: 112px; 
@@ -24,13 +39,29 @@
 		z-index: 10;
 	}
 	#signature {
-		font-family: "Caveat"; 
+		font-family: 'Caveat', cursive;
 		font-size: 125%; 
 		color: rgb(0 0 0 / 40%)
 	}
 	#title {
-		font-family: "Josefin Sans"; 
+		font-family: 'Josefin Sans', sans-serif;
 		font-size: 300%
+	}
+	#twitch {
+		float: left; 
+		margin: 0px 20px 20px; 
+		padding: 10px 10px 20px; 
+		box-shadow:4px 4px 10px rgba(0 0 0 / 30%); 
+		border:10px double var(--border_color); 
+		background: linear-gradient(45deg,var(--color1),var(--color2))
+	}
+	#discord {
+		float: left; 
+		margin: 0px 20px 20px; 
+		padding: 10px 10px 20px; 
+		box-shadow:4px 4px 10px rgba(0 0 0 / 30%); 
+		border:10px double var(--border_color); 
+		background: linear-gradient(45deg,var(--color1),var(--color2))
 	}
 	</style>
 	
@@ -576,7 +607,7 @@
 	</div>
 
 
-<div style="background: linear-gradient(45deg,#D8E4EF,#FFE5EB); margin: 10px; padding: 10px">
+<div>
 <center>
 	<img src='Other/panel-97245742-image-0a99c19b-a471-4d67-80b4-1e6701cf6ad9.png'>
 	<img src='Other/panel-97245742-image-260a0b6b-09d4-4266-9f73-40a71be6c336.png'>
@@ -592,26 +623,20 @@
 </body>
 
 <script>
-	timer();
+	background_change();
 	
 	var getSecond
 	
 	function sleep (time) {
 	return new Promise((resolve) => setTimeout(resolve, time));
 	}
-	
-	var twitch_box = document.getElementById('twitch');
-	twitch_box.style.cssText=`float: left; margin: 0px 20px 20px; padding: 10px 10px 20px; box-shadow:4px 4px 10px rgba(0 0 0 / 30%); border:3px solid ${border_color}; background: linear-gradient(45deg,${color1},${color2})`;
-	
-	var discord_box = document.getElementById('discord');
-	discord_box.style.cssText=`float: left; margin: 0px 20px 20px; padding: 10px 10px 20px; box-shadow:4px 4px 10px rgba(0 0 0 / 30%); border:3px solid ${border_color}; background: linear-gradient(45deg,${color1},${color2})`;
-	
-	async function timer() {
+
+	async function background_change() {
 		for( var i = 0; i <= 360 ; i += 1 ) {
 		await sleep(10);
 		if(i==360){i=0}
 		
-		document.body.style.background=`linear-gradient(${i}deg,${color1},${color2})`;	//body color change
+		document.body.style.background=`linear-gradient(${i}deg,var(--color1),var(--color2))`;	//body color change
 
 		}
 	}	
@@ -622,7 +647,7 @@
 		pic[j].onmouseover = async function () {
 			for (var i = 0; i <= 38 ; i += 1 ) {
 				await sleep(2);
-				this.style.cssText=`width: ${112+i}px;  height: ${112+i}px; box-shadow: ${2+6/38*i}px ${2+6/38*i}px ${6+4/38*i}px rgb(0 0 0 / 50%); margin: 3px; z-index: 999; position:relative`;
+				this.style.cssText=`width: ${112+Math.sqrt(37)*Math.sqrt(i)}px;  height: ${112+Math.sqrt(37)*Math.sqrt(i)}px; box-shadow: ${2+6/38*i}px ${2+6/38*i}px ${6+4/38*i}px rgb(0 0 0 / 50%); z-index: 999; `;
 			}
 		}
 		
@@ -630,36 +655,14 @@
 			for (var i = 0; i <= 38 ; i += 1 ) {
 				await sleep(2);
 				
-				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-6/38*i}px rgb(0 0 0 / 50%); margin: 3px; z-index: 999; position:relative`;
+				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-4/38*i}px rgb(0 0 0 / 50%); z-index: 999; `;
 				
 				if (i==38) {
-				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-6/38*i}px rgb(0 0 0 / 50%); margin: 3px; z-index: 0; position:relative`;
+				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-4/38*i}px rgb(0 0 0 / 50%); z-index: 0; `;
 				}
 			}
 		}
 	}
 	
-	
-	function show () {
-		var hidden_pic = document.getElementById('other_emoji');
-		hidden_pic.style.display = 'block' ;
-		
-		var func = document.getElementById('hide_function');
-		func.href = "javascript:hide()";
-		var title = document.getElementById('func_title');
-		title.innerHTML = 'not so relavent (hide)';
-
-	}
-	
-	function hide () {
-		var show_pic = document.getElementById('other_emoji');
-		show_pic.style.display = 'none' ;
-		
-		var func = document.getElementById('hide_function');
-		func.href = "javascript:show()";
-		var title = document.getElementById('func_title');
-		title.innerHTML = 'not so relavent (show)';
-	}
-
 
 </script>

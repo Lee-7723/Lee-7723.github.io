@@ -10,10 +10,25 @@
 	
 	
 	<style type="text/css">
+	:root {
+		--color1: #C8F4F6;
+		--color2: #EDCFE0;
+		--border_color: #982068;
+	}
 	.emoji-pic {
-		-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));
+		//-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));
 		box-shadow: 2px 2px 6px rgb(0 0 0 / 50%);
-		margin: 3px
+		margin: 3px;
+		position: relative;
+		border: 2px solid var(--border_color);
+		border-radius: 12px;
+	}
+	.emoji-pic:hover {
+		//-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));
+		margin: 3px;
+		position: relative;
+		border: 4px solid #FFFFFF;
+		border-radius: 16px;
 	}
 	.emoji-pic-box {
 		width: 112px; 
@@ -30,6 +45,22 @@
 	#title {
 		font-family: 'Josefin Sans', sans-serif;
 		font-size: 300%
+	}
+	#twitch {
+		float: left; 
+		margin: 0px 20px 20px; 
+		padding: 10px 10px 20px; 
+		box-shadow:4px 4px 10px rgba(0 0 0 / 30%); 
+		border:10px double var(--border_color); 
+		background: linear-gradient(45deg,var(--color1),var(--color2))
+	}
+	#discord {
+		float: left; 
+		margin: 0px 20px 20px; 
+		padding: 10px 10px 20px; 
+		box-shadow:4px 4px 10px rgba(0 0 0 / 30%); 
+		border:10px double var(--border_color); 
+		background: linear-gradient(45deg,var(--color1),var(--color2))
 	}
 	</style>
 	
@@ -365,7 +396,7 @@
 </div>
 
 
-<div style="background: linear-gradient(45deg,#C8F4F6,#EDCFE0)">
+<div>
 	<center>
 	<img src='Other/panel-56938961-image-033eb77b-2c97-45ab-abc1-42ab6081a51f.png'>
 	<img src='Other/panel-56938961-image-50769896-e3f3-428e-bcfc-1e51741cb49c.png'>
@@ -382,26 +413,20 @@
 </body>
 
 <script>
-	timer();
+	background_change();
 	
 	var getSecond
 	
 	function sleep (time) {
 	return new Promise((resolve) => setTimeout(resolve, time));
 	}
-	
-	var twitch_box = document.getElementById('twitch');
-	twitch_box.style.cssText=`float: left; margin: 0px 20px 20px; padding: 10px 10px 20px; box-shadow:4px 4px 10px rgba(0 0 0 / 30%); border:3px solid ${border_color}; background: linear-gradient(45deg,${color1},${color2})`;
-	
-	var discord_box = document.getElementById('discord');
-	discord_box.style.cssText=`float: left; margin: 0px 20px 20px; padding: 10px 10px 20px; box-shadow:4px 4px 10px rgba(0 0 0 / 30%); border:3px solid ${border_color}; background: linear-gradient(45deg,${color1},${color2})`;
-	
-	async function timer() {
+
+	async function background_change() {
 		for( var i = 0; i <= 360 ; i += 1 ) {
 		await sleep(10);
 		if(i==360){i=0}
 		
-		document.body.style.background=`linear-gradient(${i}deg,${color1},${color2})`;	//body color change
+		document.body.style.background=`linear-gradient(${i}deg,var(--color1),var(--color2))`;	//body color change
 
 		}
 	}	
@@ -412,7 +437,7 @@
 		pic[j].onmouseover = async function () {
 			for (var i = 0; i <= 38 ; i += 1 ) {
 				await sleep(2);
-				this.style.cssText=`width: ${112+i}px;  height: ${112+i}px; box-shadow: ${2+6/38*i}px ${2+6/38*i}px ${6+4/38*i}px rgb(0 0 0 / 50%); margin: 3px; z-index: 999; position:relative`;
+				this.style.cssText=`width: ${112+Math.sqrt(37)*Math.sqrt(i)}px;  height: ${112+Math.sqrt(37)*Math.sqrt(i)}px; box-shadow: ${2+6/38*i}px ${2+6/38*i}px ${6+4/38*i}px rgb(0 0 0 / 50%); z-index: 999; `;
 			}
 		}
 		
@@ -420,14 +445,13 @@
 			for (var i = 0; i <= 38 ; i += 1 ) {
 				await sleep(2);
 				
-				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-6/38*i}px rgb(0 0 0 / 50%); margin: 3px; z-index: 999; position:relative`;
+				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-4/38*i}px rgb(0 0 0 / 50%); z-index: 999; `;
 				
 				if (i==38) {
-				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-6/38*i}px rgb(0 0 0 / 50%); margin: 3px; z-index: 0; position:relative`;
+				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-4/38*i}px rgb(0 0 0 / 50%); z-index: 0; `;
 				}
 			}
 		}
 	}
 	
-
 </script>
