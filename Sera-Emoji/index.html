@@ -161,5 +161,71 @@
 		img.style.cssText = '';
 	}
 
+	//create reset button
+	function create_reset_button () {
+		var reset_button_style = document.createElement('style');
+		reset_button_style.innerHTML = `
+		.reset_button {
+			width: 5rem;
+			height: 2rem;
+			bottom: 2rem;
+			right: 2rem;
+			font-size: 1.2rem;
+			font-family: 'Josefin Sans';
+			text-align: center;
+			line-height: 2rem;
+			z-index: 6;
+			background-color: #FFFA;
+			border-radius: 2rem;
+			cursor: pointer;
+			user-select: none;
+			border: 2px ridge #888;
+			box-shadow: 3px 3px 6px #0006;
+			position: fixed;
+			transform: scale(1.2);
+
+			transition: 120ms;
+		}
+		.reset_button:hover {
+			background-color: #FFFF;
+		}
+		.reset_button:active {
+			background-color: #999F;
+			box-shadow: 1px 1px 2px #0006;
+			transform: scale(1.12);
+		}
+		`;
+
+		var reset_button = document.createElement('div');
+		reset_button.setAttribute('class' , 'reset_button');
+		reset_button.setAttribute('onclick' , 'reset_img_size()');
+		reset_button.innerHTML = 'Reset';
+		document.body.appendChild(reset_button_style);
+		document.body.appendChild(reset_button);
+	}
+
+	create_reset_button ()
+
+	//used in reset button
+	function reset_img_size() {
+		var emoji_pic = document.body.getElementsByClassName("emoji-pic");
+		for (var i = 0; i < emoji_pic.length; i++) {
+			emoji_pic[i].removeAttribute('style');
+		}
+		for (var i = 0; i < emoji_pic_box.length; i++) {
+			emoji_pic_box[i].removeAttribute('style');
+			emoji_pic_box[i].removeAttribute('onmouseout');
+			emoji_pic_box[i].setAttribute('onclick',`click_pic(${i})`);
+		}
+
+	}
+
+	//zoom function for phone
+	if (visualViewport.width < visualViewport.height) {
+		document.body.style.cssText = 'zoom: 1.3';
+		document.body.getElementsByClassName('reset_button')[0].style.cssText = 'zoom: 2';
+	}
+	
+
 	
 </script>
