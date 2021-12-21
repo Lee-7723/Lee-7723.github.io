@@ -6,9 +6,8 @@
 	<!--load google font-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet" crossorigin>
 
-	
 	<style type="text/css">
 	:root {
 		--color1: #AD9898;
@@ -16,27 +15,41 @@
 		--border_color: #745C5C;
 	}
 	.emoji-pic {
-		//-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));
+		/*-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));*/
 		box-shadow: 2px 2px 6px rgb(0 0 0 / 50%);
-		margin: 3px;
 		position: relative;
 		border: 2px solid var(--border_color);
 		border-radius: 12px;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		left: 0%;
+		top: 0%;
+		transition: 300ms;
 	}
 	.emoji-pic:hover {
-		//-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));
-		margin: 3px;
+		/*-webkit-filter: drop-shadow(2px 2px 6px rgb(0 0 0 / 50%));*/
 		position: relative;
 		border: 4px solid #FFFFFF;
 		border-radius: 16px;
+		width: 125%;
+		height: 125%;
+		z-index: 5;
+		left: -12.5%;
+		top: -12.5%;
 	}
+
 	.emoji-pic-box {
-		width: 112px; 
-		height: 112px; 
+		width: 116px; 
+		height: 116px; 
 		float: left;
-		margin: 6px;
-		z-index: 10;
+		margin: 4px;
+		z-index: 0;
 	}
+	.emoji-pic-box:hover {
+		z-index: 5;
+	}
+
 	#signature {
 		font-family: 'Caveat', cursive;
 		font-size: 125%; 
@@ -68,31 +81,33 @@
 	<p id='signature' align=center>Collected by Lee-7723</p>
 
 <div id='twitch'>
-	<center>
-	<a href='javascript:hide()'  id='twitch_function' style="color: #000000; text-decoration: none"><h4 style="font-family: 'Josefin Sans'; font-size: 120%;">Twitch</h4></a>
+	
+	<a id='twitch_function' style="color: #000000; text-decoration: none"><h4 style="font-family: 'Josefin Sans'; font-size: 125%; text-align: center">Twitch</h4></a>
 	<HR style="border:1; -webkit-filter: blur(2px) opacity(50%)" width="80%" color='#745C5C' SIZE=1>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaRaving.gif'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaJam.gif'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaHugs.gif'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaWave.gif'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaHeart.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaFlower.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaComfy.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaSip.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaHug.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaHuh.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaPat.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaRave.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaAngy.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaGasm.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaUwu.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaNotLikeThis.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaCheer.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaSalute.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaNT.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaLurk.png'> </div>
-	<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaCozy.png'> </div>
-	</center>
+		<div style="display: flex; flex-wrap: wrap; align-content: center; justify-content: center;">
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaRaving.gif'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaJam.gif'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaHugs.gif'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaWave.gif'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaHeart.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaFlower.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaComfy.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaSip.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaHug.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaHuh.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaPat.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaRave.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaAngy.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaGasm.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaUwu.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaNotLikeThis.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaCheer.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaSalute.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaNT.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaLurk.png'> </div>
+			<div class='emoji-pic-box'> <img class='emoji-pic' src='sewaCozy.png'> </div>
+		</div>
+	
 </div>
 
 </body>
@@ -115,59 +130,36 @@
 
 		}
 	}	
-	
-	var pic = document.getElementsByClassName("emoji-pic");
 
-	for( var j = 0; j < pic.length; j++ ) {
-		pic[j].onmouseover = async function () {
-			for (var i = 0; i <= 38 ; i += 1 ) {
-				await sleep(2);
-				this.style.cssText=`width: ${112+Math.sqrt(37)*Math.sqrt(i)}px;  height: ${112+Math.sqrt(37)*Math.sqrt(i)}px; box-shadow: ${2+6/38*i}px ${2+6/38*i}px ${6+4/38*i}px rgb(0 0 0 / 50%); z-index: 999; `;
-			}
-		}
+	var emoji_pic_box = document.body.getElementsByClassName("emoji-pic-box");
+	for (var i = 0; i < emoji_pic_box.length; i++) {
+		emoji_pic_box[i].setAttribute('onclick', `click_pic(${i})`);
 		
-		pic[j].onmouseout = async function () {
-			for (var i = 0; i <= 38 ; i += 1 ) {
-				await sleep(2);
-				
-				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-4/38*i}px rgb(0 0 0 / 50%); z-index: 999; `;
-				
-				if (i==38) {
-				this.style.cssText=`width: ${150-i}px;  height: ${150-i}px; box-shadow: ${8-6/38*i}px ${8-6/38*i}px ${10-4/38*i}px rgb(0 0 0 / 50%); z-index: 0; `;
-				}
-			}
-		}
 	}
-	
-	function show () {
-		var hidden_pic = document.getElementsByClassName('emoji-pic-box');
-		hidden_pic[0].style.display = 'block' ;
-		
-		var func = document.getElementById('twitch_function');
-		func.href = "javascript:hide()";
-		console.log(func)
-
-		var download_ = document.createElement('iframe');
-		download_.id = 'download_frame';
-		download_.src = 'sewaPat.png';
-		download_.style.display = 'none';
-		var body = document.getElementsByTagName('body')[0];
-		body.appendChild(download_)
-
-		var dl_box = document.getElementById('download_frame');
-		//location.href = 'sewaPat.png';
-		var temp_pic = document.getElementsByClassName('emoji-pic')[6].src;
-		console.log(temp_pic)
-		console.log(temp_pic.getImageData());
-	}
-	
-	function hide () {
-		var show_pic = document.getElementsByClassName('emoji-pic-box');
-		show_pic[0].style.display = 'none' ;
-		
-		var func = document.getElementById('twitch_function');
-		func.href = "javascript:show()";
-		console.log(func)
+	function click_pic (i) {
+		emoji_pic_box[i].setAttribute('onmouseout', `this.style.cssText = 'z-index: 4;'`);
+		emoji_pic_box[i].setAttribute('onclick', `click_pic_reset(${i})`);
+		emoji_pic_box[i].style.cssText = `z-index: 5;`
+		var img = emoji_pic_box[i].getElementsByClassName('emoji-pic')[0];
+		img.style.cssText = `
+		position: relative;
+		border-radius: 16px;
+		width: 125%;
+		height: 125%;
+		z-index: 5;
+		left: -12.5%;
+		top: -12.5%;`;
+		console.log("click function"+ i)
 	}
 
+	function click_pic_reset(i) {
+		//emoji_pic_box[i].style.cssText = '';
+		emoji_pic_box[i].setAttribute('onclick', `click_pic(${i})`);
+		emoji_pic_box[i].removeAttribute('onmouseout');
+		emoji_pic_box[i].removeAttribute('style');
+		var img = emoji_pic_box[i].getElementsByClassName('emoji-pic')[0];
+		img.style.cssText = '';
+	}
+
+	
 </script>
