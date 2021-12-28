@@ -2,7 +2,10 @@
     --debug_layout: #FFF2;
     --min_section: rgba(255, 255, 255, 0.75);
     --text_theme_color_1: rgb(60 60 60);
-    --text_bg_color_1: rgb(100, 100, 100);
+    --text_bg_color_1: rgb(100, 100, 100, 1);
+    --text_bg_color_2: rgba(100, 100, 100, 0.75);
+    --text_bg_color_3: rgba(100, 100, 100, 0.5);
+    --text_bg_color_3: rgba(100, 100, 100, 0.25);
 }
 
 *::-webkit-scrollbar {
@@ -27,6 +30,7 @@
     background-position: center;
     border-radius: 1rem;
 	display: block;
+    height: 1rem;
 }
 *::-webkit-scrollbar-button:start:decrement:hover, ::-webkit-scrollbar-button:end:increment:hover {
     background-color: var(--text_bg_color_1);
@@ -150,6 +154,7 @@ p {
     text-align: center;
     color: var(--text_theme_color_1);
     font-size: 2.4rem;
+    height: 2.4rem;
     font-weight: bold;
 }
 
@@ -163,7 +168,8 @@ p {
 .up > .links > a {
     margin-left: 0.3rem;
     margin-right: 0.3rem;
-    transition: 120ms;
+    transition: 150ms;
+    transition-timing-function: cubic-bezier(0.21, 0.21, 0.38, 2.28);
     color: var(--text_theme_color_1);
 }
 
@@ -221,9 +227,37 @@ p {
     padding: 0.5rem;
 }
 
-.information p {
-    height: 100%;
+.information > .tags {
+    --tag_height: 2.5rem;
+    border: 2px solid var(--text_bg_color_1);
+    border-radius: 3rem;
+    height: var(--tag_height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-size: 1.2rem;
-    overflow-y: scroll;
-
 }
+
+.information > .tags > p:first-of-type {
+    border: 2px solid var(--text_bg_color_1);
+    border-radius: 3rem;
+    background-color: var(--text_bg_color_1);
+    color: var(--min_section);
+    height: 100%;
+    line-height: var(--tag_height);
+    padding: 0 0.5rem;
+}
+.information > .tags > p:last-of-type {
+    width: -webkit-fill-available;
+    text-align: center;
+    font-size: small;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.information > .tags > p:last-of-type > span {
+    margin: 0 0.5rem;
+    border-bottom: 1px dotted var(--text_theme_color_1);
+}
+
